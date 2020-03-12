@@ -1,10 +1,12 @@
-<div>
+<div style="display:flex;flex-direction:row;flex-wrap:wrap;margin:80px 100px 0 100px">
     {{#each beers}}
-    <div>
-        <img src={{this.image_url}}>
-        <h1>{{this.name}}</h1>
-        <p>{{this.description}}</p>
-        <p>{{this.tagline}}</p>
+    <div style="width:30%;margin:0px 20px;height:40vh;display:flex;flex-direction:column;align-items:center">
+        <a href='beers/{{this.id}}/details' style="height: 50%;"><img src={{this.image_url}} style="height: 100%;"></a>
+        <div>
+            <h3 style="margin-bottom:5px">{{this.name}}</h3>
+            <p style="margin-bottom:15px;color:#bfbfbf">{{this.tagline}}</p>
+            <p style="font-size:13px;font-weight: 600;">{{this.description}}</p>
+        </div>
     </div>
     {{/each}}
 </div>
